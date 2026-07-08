@@ -65,7 +65,7 @@ export default function Footer() {
               Nutivale
             </Link>
             <p className="text-sm text-brand-cream/70 leading-relaxed max-w-sm">
-              Delivering the purest farm-fresh organic raw milk, curd-clarified Vedic ghee, handmade paneer, and clay pot curd directly to your home.
+              Delivering the purest farm-fresh raw milk, curd-clarified Vedic ghee, handmade paneer, and clay pot curd directly to your home.
             </p>
             {/* Social Icons */}
             <div className="flex space-x-4 pt-2">
@@ -158,7 +158,9 @@ export default function Footer() {
                 <span className="opacity-50 cursor-not-allowed">Refund & Returns Policy</span>
               </li>
               <li>
-                <span className="opacity-50 cursor-not-allowed">Contact Us</span>
+                <a href="mailto:support@nutivale" className="hover:text-brand-amber transition-colors">
+                  Contact: support@nutivale
+                </a>
               </li>
             </ul>
           </div>

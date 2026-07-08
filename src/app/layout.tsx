@@ -19,7 +19,7 @@ const outfit = Outfit({
 });
 
 export const metadata: Metadata = {
-  title: "Nutivale | Farm Fresh Organic Raw Milk, Ghee & Dairy",
+  title: "Nutivale | Farm Fresh Raw Milk, Ghee & Dairy",
   description: "Savor Nutivale's premium raw cow and buffalo milk, traditional curd pots, paneer, and curd-clarified pure cow and buffalo ghee.",
 };
 

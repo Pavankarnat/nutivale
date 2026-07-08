@@ -9,7 +9,7 @@ const timelineSteps = [
     phase: "01",
     title: "Grass-Fed Milking",
     subtitle: "Eco-Conscious Farms",
-    description: "Our milk is sourced early morning from free-range cow and buffalo herds that graze on lush, certified organic pastures. No hormones are ever used.",
+    description: "Our milk is sourced early morning from free-range cow and buffalo herds that graze on lush, certified natural pastures. No hormones are ever used.",
   },
   {
     phase: "02",
@@ -61,7 +61,7 @@ export default function Story() {
             From Farms to Table: The Nutivale Story
           </h1>
           <p className="text-base sm:text-lg text-brand-green/80 max-w-2xl mx-auto leading-relaxed">
-            Reconnecting tables with clean, unprocessed dairy, organic raw milks, and curd-clarified ghee set in clay pots.
+            Reconnecting tables with clean, unprocessed dairy, raw milks, and curd-clarified ghee set in clay pots.
           </p>
         </div>
       </section>
@@ -79,12 +79,12 @@ export default function Story() {
                 Most commercial dairy is homogenized and ultra-heat pasteurized, destroying original enzymes, vitamins, and natural gut bacteria. Furthermore, standard ghee is quickly extracted from industrial cream using high-pressure centrifuges.
               </p>
               <p className="text-sm text-brand-green/70 leading-relaxed font-sans">
-                At Nutivale, we prioritize traditional methods. We partner with small organic farm cooperatives who pamper their cattle. Our buffalo and cow milk is packaged raw and delivered cold. Our ghee is crafted using the ancient Bilona method, churning curd directly to ensure premium digestibility and a rich, granular texture.
+                At Nutivale, we prioritize traditional methods. We partner with small farm cooperatives who pamper their cattle. Our buffalo and cow milk is packaged raw and delivered cold. Our ghee is crafted using the ancient Bilona method, churning curd directly to ensure premium digestibility and a rich, granular texture.
               </p>
               <div className="grid grid-cols-2 gap-6 pt-4">
                 <div className="border-l-2 border-brand-amber pl-4">
                   <h4 className="font-serif text-base font-bold text-brand-green">Zero Hormones</h4>
-                  <p className="text-xs text-brand-green/60 mt-1">Our cattle are fed grass and organic fodder, ensuring milk completely free of artificial hormones.</p>
+                  <p className="text-xs text-brand-green/60 mt-1">Our cattle are fed grass and natural fodder, ensuring milk completely free of artificial hormones.</p>
                 </div>
                 <div className="border-l-2 border-brand-amber pl-4">
                   <h4 className="font-serif text-base font-bold text-brand-green">Traditional Clay Pots</h4>
@@ -98,7 +98,7 @@ export default function Story() {
               <div className="relative w-full aspect-square rounded-3xl overflow-hidden shadow-lg border border-brand-green/5">
                 <Image
                   src="/images/orchard.png"
-                  alt="Organic dairy farm pasture"
+                  alt="Dairy farm pasture"
                   fill
                   sizes="(max-w-7xl) 100vw, 40vw"
                   className="object-cover"
@@ -158,7 +158,7 @@ export default function Story() {
               Behind the Brand
             </h2>
             <p className="text-sm text-brand-green/80">
-              Meet Raju and Durga, who turned a passion for clean dairy into a premium organic standard.
+              Meet Raju and Durga, who turned a passion for clean dairy into a premium quality standard.
             </p>
           </div>
 

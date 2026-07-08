@@ -26,14 +26,14 @@ const sizePrices: Record<string, Record<string, number>> = {
     "1 Ltr": 75,
   },
   "buffalo-ghee": {
-    "250 ml": 350,
-    "500 ml": 650,
-    "1 Ltr": 1200,
+    "250 grms": 300,
+    "500 grms": 550,
+    "1 kg": 1000,
   },
   "cow-ghee": {
-    "250 ml": 350,
-    "500 ml": 650,
-    "1 Ltr": 1200,
+    "250 grms": 450,
+    "500 grms": 800,
+    "1 kg": 1500,
   },
   "paneer": {
     "250 grms": 150,
@@ -67,7 +67,7 @@ const productsData: Product[] = [
     image: "/images/cow_milk.png",
     category: "milk",
     organic: true,
-    description: "Pure, light, and easy-to-digest organic raw A2 cow milk.",
+    description: "Pure, light, and easy-to-digest raw cow milk.",
     sizes: ["1/2 Ltr", "1 Ltr"],
   },
   {
@@ -75,22 +75,22 @@ const productsData: Product[] = [
     name: "Buffalo Ghee (Curd Clarified)",
     rating: 4.8,
     reviews: 92,
-    image: "/images/buffalo_ghee.png",
+    image: "/images/buffalo_ghee.png?v=2",
     category: "ghee",
     organic: true,
     description: "Rich, aromatic buffalo ghee, slow-clarified from cultured buffalo curd.",
-    sizes: ["250 ml", "500 ml", "1 Ltr"],
+    sizes: ["250 grms", "500 grms", "1 kg"],
   },
   {
     id: "cow-ghee",
     name: "Cow Ghee (Curd Clarified)",
     rating: 4.9,
     reviews: 215,
-    image: "/images/cow_ghee.png",
+    image: "/images/cow_ghee.png?v=2",
     category: "ghee",
     organic: true,
     description: "Traditional Vedic Bilona cow ghee churned from cultured curd, not cream.",
-    sizes: ["250 ml", "500 ml", "1 Ltr"],
+    sizes: ["250 grms", "500 grms", "1 kg"],
   },
   {
     id: "paneer",
@@ -100,7 +100,7 @@ const productsData: Product[] = [
     image: "/images/paneer.png",
     category: "paneer",
     organic: true,
-    description: "Soft, spongy cottage cheese cubes pressed fresh using organic whole milk.",
+    description: "Soft, spongy cottage cheese cubes pressed fresh using pure whole milk.",
     sizes: ["250 grms", "500 grms", "1 kg"],
   },
   {
@@ -121,14 +121,12 @@ export default function Shop() {
   const [selectedCategory, setSelectedCategory] = useState<string>("all");
   const [sortBy, setSortBy] = useState<string>("featured");
   const [priceRange, setPriceRange] = useState<number>(1200);
-  const [onlyOrganic, setOnlyOrganic] = useState<boolean>(false);
-
   // Keep track of selected sizes for each product card in catalog
   const [chosenSizes, setChosenSizes] = useState<Record<string, string>>({
     "buffalo-milk": "1 Ltr",
     "cow-milk": "1 Ltr",
-    "buffalo-ghee": "500 ml",
-    "cow-ghee": "500 ml",
+    "buffalo-ghee": "500 grms",
+    "cow-ghee": "500 grms",
     "paneer": "250 grms",
     "curd-pot": "1 Ltr",
   });
@@ -153,9 +151,6 @@ export default function Shop() {
         if (currentPrice > priceRange) {
           return false;
         }
-        if (onlyOrganic && !product.organic) {
-          return false;
-        }
         return true;
       })
       .sort((a, b) => {
@@ -175,13 +170,12 @@ export default function Shop() {
         }
         return a.id.localeCompare(b.id);
       });
-  }, [selectedCategory, sortBy, priceRange, onlyOrganic, chosenSizes]);
+  }, [selectedCategory, sortBy, priceRange, chosenSizes]);
 
   const resetFilters = () => {
     setSelectedCategory("all");
     setSortBy("featured");
     setPriceRange(1200);
-    setOnlyOrganic(false);
   };
 
   return (
@@ -267,22 +261,6 @@ export default function Shop() {
                   <span>₹1,200</span>
                 </div>
               </div>
-
-              {/* Preferences / Certifications */}
-              <div className="space-y-3">
-                <h3 className="text-xs font-bold uppercase tracking-wider text-brand-green/60">
-                  Certifications
-                </h3>
-                <label className="flex items-center gap-3 cursor-pointer group text-sm font-medium text-brand-green">
-                  <input
-                    type="checkbox"
-                    checked={onlyOrganic}
-                    onChange={(e) => setOnlyOrganic(e.target.checked)}
-                    className="w-4 h-4 rounded border-brand-green/30 text-brand-green focus:ring-brand-green accent-brand-green"
-                  />
-                  <span>100% Organic Certified</span>
-                </label>
-              </div>
             </aside>
 
             {/* Product Grid and Header */}
@@ -348,11 +326,6 @@ export default function Shop() {
                             <span className="bg-brand-green text-brand-cream text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full text-center">
                               {product.category}
                             </span>
-                            {product.organic && (
-                              <span className="bg-brand-amber text-brand-slate text-[9px] font-extrabold uppercase tracking-wider px-2 py-0.5 rounded-full text-center">
-                                Organic
-                              </span>
-                            )}
                           </div>
                         </div>
 

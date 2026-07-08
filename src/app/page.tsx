@@ -16,14 +16,14 @@ const sizePrices: Record<string, Record<string, number>> = {
     "1 Ltr": 75,
   },
   "buffalo-ghee": {
-    "250 ml": 350,
-    "500 ml": 650,
-    "1 Ltr": 1200,
+    "250 grms": 300,
+    "500 grms": 550,
+    "1 kg": 1000,
   },
   "cow-ghee": {
-    "250 ml": 350,
-    "500 ml": 650,
-    "1 Ltr": 1200,
+    "250 grms": 450,
+    "500 grms": 800,
+    "1 kg": 1500,
   },
   "paneer": {
     "250 grms": 150,
@@ -55,7 +55,7 @@ const bestsellers = [
     reviews: 112,
     image: "/images/cow_milk.png",
     category: "Milk",
-    description: "Pure, light, and easy-to-digest organic raw A2 cow milk.",
+    description: "Pure, light, and easy-to-digest raw cow milk.",
     sizes: ["1/2 Ltr", "1 Ltr"],
   },
   {
@@ -63,10 +63,10 @@ const bestsellers = [
     name: "Cow Ghee (Curd Clarified)",
     rating: 4.9,
     reviews: 215,
-    image: "/images/cow_ghee.png",
+    image: "/images/cow_ghee.png?v=2",
     category: "Ghee",
     description: "Traditional Vedic Bilona cow ghee churned from cultured curd, not cream.",
-    sizes: ["250 ml", "500 ml", "1 Ltr"],
+    sizes: ["250 grms", "500 grms", "1 kg"],
   },
   {
     id: "paneer",
@@ -75,7 +75,7 @@ const bestsellers = [
     reviews: 84,
     image: "/images/paneer.png",
     category: "Paneer",
-    description: "Soft, spongy cottage cheese cubes pressed fresh using organic whole milk.",
+    description: "Soft, spongy cottage cheese cubes pressed fresh using pure whole milk.",
     sizes: ["250 grms", "500 grms", "1 kg"],
   },
 ];
@@ -294,10 +294,10 @@ const recipesData: Recipe[] = [
     servings: 2,
     ingredients: [
       "2 cups fresh whole milk",
-      "1/2 tsp organic turmeric powder",
+      "1/2 tsp turmeric powder",
       "1/4 tsp cinnamon powder",
       "Pinch of freshly ground black pepper",
-      "1 tsp organic honey or jaggery (optional)"
+      "1 tsp honey or jaggery (optional)"
     ],
     instructions: [
       "Heat whole milk in a small saucepan over medium heat.",
@@ -330,7 +330,7 @@ export default function Home() {
   const [chosenSizes, setChosenSizes] = useState<Record<string, string>>({
     "buffalo-milk": "1 Ltr",
     "cow-milk": "1 Ltr",
-    "cow-ghee": "500 ml",
+    "cow-ghee": "500 grms",
     "paneer": "250 grms",
   });
 
@@ -386,7 +386,7 @@ export default function Home() {
                   <p className="text-[10px] text-brand-green/60 uppercase tracking-wider font-semibold">Curd Ghee</p>
                 </div>
                 <div className="text-center lg:text-left">
-                  <h4 className="text-2xl font-bold font-serif text-brand-green">A2 Milk</h4>
+                  <h4 className="text-2xl font-bold font-serif text-brand-green">Raw Milk</h4>
                   <p className="text-[10px] text-brand-green/60 uppercase tracking-wider font-semibold">Grass-Fed</p>
                 </div>
               </div>
@@ -444,7 +444,7 @@ export default function Home() {
               {
                 name: "Ghee",
                 subtext: "HERITAGE GOLD",
-                image: "/images/cow_ghee.png",
+                image: "/images/cow_ghee.png?v=2",
                 link: "/shop?category=ghee",
               },
               {
@@ -498,7 +498,7 @@ export default function Home() {
                 Our Dairy Best Sellers
               </h2>
               <p className="text-sm text-brand-green/70 max-w-xl">
-                Rich, organic, chemical-free dairy products prepared using traditional Vedic methods.
+                Rich, chemical-free dairy products prepared using traditional Vedic methods.
               </p>
             </div>
             <Link
@@ -716,7 +716,7 @@ export default function Home() {
               <div className="relative w-full aspect-[4/5] rounded-3xl overflow-hidden shadow-lg border border-brand-green/5">
                 <Image
                   src="/images/orchard.png"
-                  alt="Organic dairy farming landscape"
+                  alt="Dairy farming landscape"
                   fill
                   sizes="(max-w-7xl) 100vw, 40vw"
                   className="object-cover hover:scale-102 transition-transform duration-500"
