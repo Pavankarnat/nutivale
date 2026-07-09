@@ -9,7 +9,7 @@ import { useCart } from "@/context/CartContext";
 const sizePrices: Record<string, Record<string, number>> = {
   "buffalo-milk": {
     "1/2 Ltr": 40,
-    "1 Ltr": 75,
+    "1 Ltr": 90,
   },
   "cow-milk": {
     "1/2 Ltr": 40,
@@ -31,9 +31,9 @@ const sizePrices: Record<string, Record<string, number>> = {
     "1 kg": 540,
   },
   "curd-pot": {
-    "1/2 Ltr": 60,
-    "1 Ltr": 110,
-    "5 Ltr": 500,
+    "1/2 Ltr": 70,
+    "1 Ltr": 130,
+    "5 Ltr": 600,
   },
 };
 
