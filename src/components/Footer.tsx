@@ -159,7 +159,12 @@ export default function Footer() {
               </li>
               <li>
                 <a href="mailto:support@nutivale" className="hover:text-brand-amber transition-colors">
-                  Contact: support@nutivale
+                  Email: support@nutivale
+                </a>
+              </li>
+              <li>
+                <a href="tel:+919951978549" className="hover:text-brand-amber transition-colors">
+                  Call: +91 99519 78549
                 </a>
               </li>
             </ul>
