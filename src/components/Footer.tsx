@@ -168,7 +168,13 @@ export default function Footer() {
 
         {/* Bottom Bar */}
         <div className="mt-16 pt-8 border-t border-brand-cream/10 flex flex-col md:flex-row items-center justify-between text-xs text-brand-cream/60 gap-4">
-          <p>© {new Date().getFullYear()} Nutivale Inc. All rights reserved.</p>
+          <div className="flex flex-col md:flex-row md:items-center gap-2 md:gap-6">
+            <p>© {new Date().getFullYear()} Nutivale Inc. All rights reserved.</p>
+            <div className="flex items-center gap-2">
+              <span className="inline-block w-2 h-2 rounded-full bg-brand-amber"></span>
+              <span className="font-medium text-brand-cream/80">FSSAI License No. 10125019000269</span>
+            </div>
+          </div>
           <div className="flex space-x-6">
             <span className="opacity-50">Privacy Policy</span>
             <span className="opacity-50">Terms of Service</span>
