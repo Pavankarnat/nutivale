@@ -36,7 +36,7 @@ export default function CartDrawer() {
   const shippingPercentage = Math.min((cartTotal / freeShippingThreshold) * 100, 100);
 
   const handleCheckout = () => {
-    const phoneNumber = "919951129117"; // User WhatsApp number
+    const phoneNumber = "919951978549"; // User WhatsApp number
     
     // Compile order message text
     let orderDetails = `*New Order from Nutivale website* 🌿\n\n`;

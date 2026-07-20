@@ -167,6 +167,16 @@ export default function Footer() {
                   Call: +91 99519 78549
                 </a>
               </li>
+              <li>
+                <a
+                  href="https://wa.me/919951978549"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-brand-amber transition-colors"
+                >
+                  WhatsApp: +91 99519 78549
+                </a>
+              </li>
             </ul>
           </div>
         </div>
